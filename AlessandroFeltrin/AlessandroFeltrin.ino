@@ -32,3 +32,17 @@ void AccendiLed(int led,int tempo)
   delay(tempo);
   digitalWrite(led,LOW);
 }
+
+void RichiestaValori()
+{
+  
+}
+
+int RichiestaTempo(String domanda)
+{
+  Serial.println("");
+  while(Serial.available()==0) {};
+  String risposta = Serial.readString();
+  int valoreTempo = risposta.toInt();
+  return valoreTempo = valoreTempo*1000;
+}
