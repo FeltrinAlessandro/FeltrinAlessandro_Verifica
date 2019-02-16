@@ -1,5 +1,20 @@
+int rosso;
+int giallo;
+int bianco;
+int verde;
+
 void setup() {
-  // put your setup code here, to run once:
+rosso=13;
+giallo=11;
+bianco=7;
+verde=5;
+
+pinMode(rosso,OUTPUT);
+pinMode(giallo,OUTPUT);
+pinMode(bianco,OUTPUT);
+pinMode(verde,OUTPUT);
+
+Serial.begin(9600);
 
 }
 
