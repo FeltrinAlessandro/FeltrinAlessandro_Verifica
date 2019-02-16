@@ -51,5 +51,6 @@ int RichiestaTempo(String domanda)
   while(Serial.available()==0) {};
   String risposta = Serial.readString();
   int valoreTempo = risposta.toInt();
-  return valoreTempo = valoreTempo*1000;
+  valoreTempo = valoreTempo*1000;
+  return valoreTempo;
 }
