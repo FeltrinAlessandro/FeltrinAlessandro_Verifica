@@ -2,6 +2,10 @@ int rosso;
 int giallo;
 int bianco;
 int verde;
+int durataRosso;
+int durataGiallo;
+int durataBianco;
+int durataVerde; 
 
 void setup() {
 rosso=13;
@@ -15,10 +19,16 @@ pinMode(bianco,OUTPUT);
 pinMode(verde,OUTPUT);
 
 Serial.begin(9600);
-
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
+
+}
+
+void AccendiLed(int led,int tempo)
+{
+  digitalWrite(led,HIGH);
+  delay(tempo);
+  digitalWrite(led,LOW);
 }
