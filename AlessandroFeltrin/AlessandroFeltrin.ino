@@ -21,9 +21,13 @@ pinMode(verde,OUTPUT);
 Serial.begin(9600);
 }
 
-void loop() {
-
-
+void loop() 
+{
+  RichiestaValori();
+  AccendiLed(rosso,durataRosso);
+  AccendiLed(giallo,durataGiallo);
+  AccendiLed(bianco,durataBianco);
+  AccendiLed(verde,durataVerde);
 }
 
 void AccendiLed(int led,int tempo)
@@ -35,12 +39,15 @@ void AccendiLed(int led,int tempo)
 
 void RichiestaValori()
 {
-  
+  durataRosso = RichiestaTempo("Qunato vuoi che duri il rosso?(input in secondi)");
+  durataGiallo = RichiestaTempo("Qunato vuoi che duri il giallo?(input in secondi)");
+  durataBianco = RichiestaTempo("Qunato vuoi che duri il bianco?(input in secondi)");
+  durataVerde = RichiestaTempo("Qunato vuoi che duri il verde?(input in secondi)");
 }
 
 int RichiestaTempo(String domanda)
 {
-  Serial.println("");
+  Serial.println(domanda);
   while(Serial.available()==0) {};
   String risposta = Serial.readString();
   int valoreTempo = risposta.toInt();
