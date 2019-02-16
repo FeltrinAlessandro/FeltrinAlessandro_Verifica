@@ -39,10 +39,10 @@ void AccendiLed(int led,int tempo)
 
 void RichiestaValori()
 {
-  durataRosso = RichiestaTempo("Qunato vuoi che duri il rosso?(input in secondi)");
-  durataGiallo = RichiestaTempo("Qunato vuoi che duri il giallo?(input in secondi)");
-  durataBianco = RichiestaTempo("Qunato vuoi che duri il bianco?(input in secondi)");
-  durataVerde = RichiestaTempo("Qunato vuoi che duri il verde?(input in secondi)");
+  durataRosso = RichiestaTempo("Quanto vuoi che duri il rosso?(input in secondi)");
+  durataGiallo = RichiestaTempo("Quanto vuoi che duri il giallo?(input in secondi)");
+  durataBianco = RichiestaTempo("Quanto vuoi che duri il bianco?(input in secondi)");
+  durataVerde = RichiestaTempo("Quanto vuoi che duri il verde?(input in secondi)");
 }
 
 int RichiestaTempo(String domanda)
